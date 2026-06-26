@@ -1,305 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>Happy Birthday Kanishka</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:linear-gradient(180deg,#0a0a0a,#1b1b1b,#050505);
-font-family:'Poppins',sans-serif;
-color:white;
-overflow:hidden;
-}
-
-.page{
-display:none;
-height:100vh;
-padding:30px;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
-animation:fade 1.2s;
-}
-
-#page1{
-display:flex;
-}
-
-h1{
-font-family:'Creepster',cursive;
-font-size:70px;
-letter-spacing:3px;
-color:#111;
-text-shadow:
-0 0 8px #444,
-0 0 20px #000;
-margin-bottom:30px;
-}
-
-.card{
-
-width:85%;
-max-width:900px;
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(10px);
-
-padding:35px;
-
-border-radius:25px;
-
-border:1px solid rgba(255,255,255,.08);
-
-box-shadow:0 0 40px rgba(0,0,0,.5);
-
-}
-
-p{
-line-height:1.8;
-font-size:16px;
-}
-
-button{
-
-margin-top:25px;
-padding:14px 30px;
-
-border:none;
-
-border-radius:30px;
-
-background:#151515;
-
-color:white;
-
-cursor:pointer;
-
-transition:.5s;
-
-font-size:15px;
-}
-
-button:hover{
-
-transform:translateY(-4px);
-
-background:#262626;
-
-}
-
-.heart{
-
-position:absolute;
-
-font-size:20px;
-
-color:#222;
-
-animation:float 8s linear infinite;
-
-pointer-events:none;
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-transform:translateY(20px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-@keyframes float{
-
-0%{
-
-transform:translateY(100vh);
-opacity:0;
-
-}
-
-50%{
-
-opacity:1;
-
-}
-
-100%{
-
-transform:translateY(-100px);
-
-opacity:0;
-
-}
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wish</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Playfair+Display&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            margin: 0; background: #0a0a0a; color: #d1d1d1; 
+            font-family: 'Playfair Display', serif; overflow-x: hidden;
+        }
+        .page { 
+            display: none; height: 100vh; flex-direction: column; 
+            align-items: center; justify-content: center; padding: 20px; text-align: center;
+        }
+        #page1 { display: flex; }
+        h1 { font-family: 'Creepster', cursive; font-size: 3rem; color: #8b0000; margin-bottom: 20px; }
+        p { max-width: 80%; line-height: 1.6; font-size: 1.2rem; }
+        button { 
+            background: #1a1a1a; border: 1px solid #555; color: #fff; 
+            padding: 15px 30px; cursor: pointer; margin: 10px; 
+            font-family: 'Playfair Display'; transition: 0.3s; border-radius: 5px;
+        }
+        button:hover { background: #8b0000; border-color: #8b0000; }
+        .heart { position: absolute; color: #8b0000; animation: float 6s linear infinite; pointer-events: none; }
+        @keyframes float { 0% { transform: translateY(100vh); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(-10vh); opacity: 0; } }
+    </style>
 </head>
-
 <body>
 
-<div class="page" id="page1">
-
-<h1>Happy Birthday Kanishka</h1>
-
-<button onclick="changePage('page2')">
-Open Gift 🖤
-</button>
-
-</div>
-
-
-<div class="page" id="page2">
-
-<div class="card">
-
-<p>
-
-Hello I am Akshat… fuck you already know it, why do I have to say?….
-
-okok so first of all Happy Birthday Kanishka 🎂
-
-i was thinking of writing something normal and emotional here but then I remembered…tu uske kabil hi nahi 🤣 sorry not sorry
-
-ummm normally HBD bolna is not my type and vo normal logo ke liye hota hai but for some reason you’re kinda important….
-
-zada kush mat hona tu itni achi hai nhi meri baat bina sunne gyi thi.…
-
-umm so I hope this year gives you more happiness, less stress and swati jaise log 😓 and more moments where you randomly smile cuz gurl yk life’s tuff be happy enjoy alot and say no to drugs 🤧🚭
-
-cuz taking alcohol is uncool….
-
-yk if taking alcohol is uncool you’re the most uncool motherfucker on this planet 🤭🤭
-
-okok im just writing anything but yk thoda acha lamba sa wish hona chahiye...
-
-umm so i just want u to be happy this year no not only this year but your entire life.
-
-And so yeah once again happy birthday TWIN 😉
-
-~Akshuuu or Batman~
-
-</p>
-
-<button onclick="changePage('yes')">
-Did you like it? 🥺
-</button>
-
-<button onclick="changePage('no')">
-You didn't like 😒
-</button>
-
-</div>
-
-</div>
-
-
-<div class="page" id="yes">
-
-<div class="card">
-
-<h1>YAY 🤪</h1>
-
-<p>
-
-Thank you. I knew you were my true friend.
-
-Its okay if you're just a little weird person,
-you're still my tiny weird person 🤪
-
-Twin forever.
-
-END 🖤
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="page" id="no">
-
-<div class="card">
-
-<h1>EXCUSE ME??</h1>
-
-<p>
-
-You didn't like it???
-
-Batman spent creativity on this 😭
-
-Friendship status:
-
-⚠ UNDER INVESTIGATION ⚠
-
-</p>
-
-</div>
-
-</div>
-
-
-<script>
-
-function changePage(id){
-
-document.querySelectorAll(".page")
-.forEach(page=>page.style.display="none");
-
-document.getElementById(id)
-.style.display="flex";
-
-}
-
-
-for(let i=0;i<25;i++){
-
-let heart=document.createElement("div");
-
-heart.innerHTML="🖤";
-
-heart.classList.add("heart");
-
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.animationDuration=
-(Math.random()*5+5)+"s";
-
-heart.style.fontSize=
-(Math.random()*20+10)+"px";
-
-document.body.appendChild(heart);
-
-}
-
-</script>
-
+    <div id="page1" class="page">
+        <h1>Happy Birthday Kanishka</h1>
+        <button onclick="showPage('page2')">Open Gift</button>
+    </div>
+
+    <div id="page2" class="page">
+        <p>Hello I am Akshat… fuck you already know it, why do I have to say?….okok so first of all Happy Birthday Kanishka 🎂 i was thinking of writing something normal and emotional here but then I remembered…tu uske kabil hi nahi 🤣 sorry not sorry ummm normally HBD bolna is not my type and vo normal logo ke liye hota hai but for some reason you’re kinda important….zada kush mat hona tu itni achi hai nhi meri baat bina sunne gyi thi.…umm so I hope this year gives you more happiness, less stress and swati jaise log 😓 and more moments where you randomly smile cuz gurl yk life’s tuff be happy enjoy alot and say no to drugs 🤧🚭 cuz taking alcohol is uncool….yk if taking alcohol is uncool you’re the most uncool motherfucker on this planet 🤭🤭 okok im just writing anything but yk thoda acha lamba sa wish hona chahiye umm so i just want u to be happy this year no not only this year, but in your entire life I wish you a very happy prosperous and jo bhi baangbhosda khete hai vo valla birthday 🎁 and I didn’t even know that what gift I could give you that I thought that I could make something like this umm you once said you like these kinda things so I thought this would be the best gift. I could give you. And so yeah once again, many many happy returns of the day Iske aage idk but once again, happy birthday TWIN 😉 though teri harkate maar khane vali hoti hai but still u are my twin or blud what ever u say so, yeah, I hope you like this 🫦….. ~Akshuuu or Batman~</p>
+        <div>
+            <button onclick="showPage('page-yes')">Did you like it?</button>
+            <button onclick="showPage('page-no')">You didn’t like</button>
+        </div>
+    </div>
+
+    <div id="page-yes" class="page">
+        <p>Thank you. I knew you were my true friend its okay, if you’re just a little gay person but you’re my tiny gay person are gay friends 🤪</p>
+    </div>
+    <div id="page-no" class="page">
+        <p>Get the fuck out of my Sight I’m gonna fucking kill you right now that even your spirit will fear me out</p>
+    </div>
+
+    <script>
+        function showPage(id) {
+            document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+            document.getElementById(id).style.display = 'flex';
+            for(let i=0; i<8; i++) {
+                let h = document.createElement('div');
+                h.innerHTML = '♥'; h.className = 'heart';
+                h.style.left = Math.random() * 100 + 'vw';
+                h.style.animationDelay = (Math.random() * 2) + 's';
+                document.body.appendChild(h);
+            }
+        }
+    </script>
 </body>
 </html>
