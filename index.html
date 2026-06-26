@@ -2,64 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Wish</title>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Playfair+Display&display=swap" rel="stylesheet">
     <style>
-        body { 
-            margin: 0; background: #000000; color: #6B0909; 
-            font-family: 'Playfair Display', serif; overflow-x: hidden;
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap');
+
+        body {
+            background-color: #4A0404; /* Bloody Wine */
+            color: black;
+            font-family: 'Special Elite', cursive;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+            height: 100vh;
         }
-        .page { 
-            display: none; height: 100vh; flex-direction: column; 
-            align-items: center; justify-content: center; padding: 20px; text-align: center;
+
+        .container { display: none; position: relative; z-index: 10; }
+        .active { display: block; }
+
+        h1 { font-family: 'Creepster', cursive; font-size: 4rem; color: black; }
+        
+        .inbox {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border: 3px solid black;
+            margin: 20px auto;
+            max-width: 700px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
-        #page1 { display: flex; }
-        h1 { font-family: 'Creepster', cursive; font-size: 3rem; color: #8b0000; margin-bottom: 20px; }
-        p { max-width: 80%; line-height: 1.6; font-size: 1.2rem; }
-        button { 
-            background: #1a1a1a; border: 1px solid #555; color: #fff; 
-            padding: 15px 30px; cursor: pointer; margin: 10px; 
-            font-family: 'Playfair Display'; transition: 0.3s; border-radius: 5px;
+
+        button {
+            display: block;
+            margin: 15px auto;
+            padding: 15px 30px;
+            cursor: pointer;
+            background: black;
+            color: white;
+            border: none;
+            font-family: 'Special Elite';
+            font-size: 1rem;
         }
-        button:hover { background: #8b0000; border-color: #8b0000; }
-        .heart { position: absolute; color: #000000; animation: float 6s linear infinite; pointer-events: none; }
-        @keyframes float { 0% { transform: translateY(100vh); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(-10vh); opacity: 0; } }
+
+        /* Floating Hearts Animation */
+        .heart {
+            position: absolute;
+            color: black;
+            font-size: 20px;
+            animation: float 5s linear infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-10vh); opacity: 0; }
+        }
     </style>
 </head>
 <body>
 
-    <div id="page1" class="page">
+    <script>
+        for(let i=0; i<15; i++) {
+            let h = document.createElement('div');
+            h.innerHTML = '🖤'; h.className = 'heart';
+            h.style.left = Math.random() * 100 + 'vw';
+            h.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(h);
+        }
+    </script>
+
+    <div id="page1" class="container active">
         <h1>Happy Birthday Kanishka</h1>
-        <button onclick="showPage('page2')">Open Gift</button>
+        <p>Something dreadful, devoted, and devastatingly fond was written for you. Step in, twin.</p>
+        <button onclick="showPage('page2')">Open Letter</button>
     </div>
 
-    <div id="page2" class="page">
-        <p>Hello I am Akshat… fuck you already know it, why do I have to say?….okok so first of all Happy Birthday Kanishka 🎂 i was thinking of writing something normal and emotional here but then I remembered…tu uske kabil hi nahi 🤣 sorry not sorry ummm normally HBD bolna is not my type and vo normal logo ke liye hota hai but for some reason you’re kinda important….zada kush mat hona tu itni achi hai nhi meri baat bina sunne gyi thi.…umm so I hope this year gives you more happiness, less stress and swati jaise log 😓 and more moments where you randomly smile cuz gurl yk life’s tuff be happy enjoy alot and say no to drugs 🤧🚭 cuz taking alcohol is uncool….yk if taking alcohol is uncool you’re the most uncool motherfucker on this planet 🤭🤭 okok im just writing anything but yk thoda acha lamba sa wish hona chahiye umm so i just want u to be happy this year no not only this year, but in your entire life I wish you a very happy prosperous and jo bhi baangbhosda khete hai vo valla birthday 🎁 and I didn’t even know that what gift I could give you that I thought that I could make something like this umm you once said you like these kinda things so I thought this would be the best gift. I could give you. And so yeah once again, many many happy returns of the day Iske aage idk but once again, happy birthday TWIN 😉 though teri harkate maar khane vali hoti hai but still u are my twin or blud what ever u say so, yeah, I hope you like this 🫦….. ~Akshuuu or Batman~</p>
-        <div>
-            <button onclick="showPage('page-yes')">Did you like it?</button>
-            <button onclick="showPage('page-no')">You didn’t like</button>
+    <div id="page2" class="container">
+        <div style="font-size: 1.5rem; font-style: italic;">For Kanishka, with sins & sincerity</div>
+        <div class="inbox">
+            Hello I am Akshat… fuck you already know it, why do I have to say?….okok so first of all Happy Birthday Kanishka 🎂 i was thinking of writing something normal and emotional here but then I remembered…tu uske kabil hi nahi 🤣 sorry not sorry ummm normally HBD bolna is not my type and vo normal logo ke liye hota hai but for some reason you’re kinda important….zada kush mat hona tu itni achi hai nhi meri baat bina sunne gyi thi.…umm so I hope this year gives you more happiness, less stress and swati jaise log 😓 and more moments where you randomly smile cuz gurl yk life’s tuff be happy enjoy alot and say no to drugs 🤧🚭 cuz taking alcohol is uncool….yk if taking alcohol is uncool you’re the most uncool motherfucker on this planet 🤭🤭 okok im just writing anything but yk thoda acha lamba sa wish hona chahiye umm so i just want u to be happy this year no not only this year, but in your entire life I wish you a very happy prosperous and jo bhi baangbhosda khete hai vo valla birthday 🎁 and I didn’t even know that what gift I could give you that I thought that I could make something like this umm you once said you like these kinda things so I thought this would be the best gift. I could give you. And so yeah once again, many many happy returns of the day Iske aage idk but once again, happy birthday TWIN 😉 though teri harkate maar khane vali hoti hai but still u are my twin or blud what ever u say so, yeah, I hope you like this 🫦….. ~Akshuuu or Batman~
         </div>
+        <button onclick="verdict('Blessed')">You like it</button>
+        <button onclick="verdict('Cursed')">You didn't like</button>
     </div>
 
-    <div id="page-yes" class="page">
-        <p>Thank you. I knew you were my true friend its okay, if you’re just a little gay person but you’re my tiny gay person are gay friends 🤪</p>
-    </div>
-    <div id="page-no" class="page">
-        <p>Get the fuck out of my Sight I’m gonna fucking kill you right now that even your spirit will fear me out</p>
+    <div id="page3" class="container">
+        <h1 id="verdictTitle"></h1>
+        <p id="verdictText"></p>
+        <p>-end of correspondence-</p>
     </div>
 
     <script>
         function showPage(id) {
-            document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
-            document.getElementById(id).style.display = 'flex';
-            for(let i=0; i<8; i++) {
-                let h = document.createElement('div');
-                h.innerHTML = '♥'; h.className = 'heart';
-                h.style.left = Math.random() * 100 + 'vw';
-                h.style.animationDelay = (Math.random() * 2) + 's';
-                document.body.appendChild(h);
+            document.querySelectorAll('.container').forEach(div => div.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+        function verdict(type) {
+            if(type === 'Blessed') {
+                document.getElementById('verdictTitle').innerText = "-Verdict: Blessed-";
+                document.getElementById('verdictText').innerText = "Thank you. I knew you were my true friend its okay, if you’re just a little gay person but you’re my tiny gay person are gay friends 🤪";
+            } else {
+                document.getElementById('verdictTitle').innerText = "-Verdict: Cursed-";
+                document.getElementById('verdictText').innerText = "Get the fuck out of my Sight I’m gonna fucking kill you right now that even your spirit will fear me out";
             }
+            showPage('page3');
         }
     </script>
 </body>
